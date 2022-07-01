@@ -136,7 +136,7 @@ const getCollegeDetails = async function (req, res) {
     }
     //************************DB CALL************************/
     let collegeData = await collegeModel
-      .findOne({ name: queryData.name })
+      .findOne{ name: queryData.name }
       .select({ name: 1, fullName: 1, logoLink: 1, isDeleted: 1 });
     if (!collegeData)
       return res
