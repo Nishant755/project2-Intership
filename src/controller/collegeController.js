@@ -57,7 +57,7 @@ const createCollege = async function (req, res) {
         status: false,
         msg: "College Details has been already Deleted",
       });
-    if (typeof isDeleted === "string")
+    if (typeof (isDeleted !== "boolean"))
       return res.status(400).send({
         status: false,
         msg: "isDeleted should be Boolean type",
